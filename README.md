@@ -1,15 +1,10 @@
-# Xellitix Commons
+# Xellitix Commons - Networking
 
-Java libraries.
+Java networking library.
 
 ## Status
 
 __Pre-Alpha__
-
-## Modules
-
-- Docker
-- Networking
 
 ## Style
 
