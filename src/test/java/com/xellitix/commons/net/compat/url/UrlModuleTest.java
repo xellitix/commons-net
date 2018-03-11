@@ -1,4 +1,4 @@
-package com.xellitix.commons.net.url;
+package com.xellitix.commons.net.compat.url;
 
 import com.google.inject.Guice;
 import com.google.inject.Injector;
