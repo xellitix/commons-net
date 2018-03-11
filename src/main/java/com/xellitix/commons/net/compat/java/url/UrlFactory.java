@@ -1,14 +1,14 @@
-package com.xellitix.commons.net.compat.url;
+package com.xellitix.commons.net.compat.java.url;
 
 import java.net.MalformedURLException;
 import java.net.URL;
 
 /**
- * Default {@link UrlFactory} implementation.
+ * {@link URL} factory.
  *
  * @author Grayson Kuhns
  */
-public class DefaultUrlFactory implements UrlFactory {
+public interface UrlFactory {
 
   /**
    * Creates a {@link URL}.
@@ -17,8 +17,5 @@ public class DefaultUrlFactory implements UrlFactory {
    * @return The {@link URL}.
    * @throws MalformedURLException If the string representation is malformed.
    */
-  @Override
-  public URL create(final String url) throws MalformedURLException {
-    return new URL(url);
-  }
+  URL create(String url) throws MalformedURLException;
 }

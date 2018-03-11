@@ -1,4 +1,4 @@
-package com.xellitix.commons.net.compat.url;
+package com.xellitix.commons.net.compat.java.url;
 
 import com.google.inject.Guice;
 import com.google.inject.Injector;
@@ -15,7 +15,7 @@ public class UrlModuleTest {
   private final Injector injector = Guice.createInjector(new UrlModule());
 
   @Test
-  public void provisionURLFactoryTest() {
+  public void provision__UrlFactory__Test() {
     injector.getInstance(UrlFactory.class);
   }
 }
