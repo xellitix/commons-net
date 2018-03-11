@@ -1,4 +1,4 @@
-package com.xellitix.commons.net.url;
+package com.xellitix.commons.net.compat.url;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -17,7 +17,7 @@ public class DefaultUrlFactoryTest {
 
   // Constants
   private static final String URL_VALID = "https://foo.bar:8080/page.php?id=5";
-  private static final String URL_INVALID = "a7sd9d89a98s7d987sd";
+  private static final String URL_MALFORMED = "a7sd9d89a98s7d987sd";
 
   // Rules
   @Rule
@@ -27,7 +27,7 @@ public class DefaultUrlFactoryTest {
   private DefaultUrlFactory urlFactory = new DefaultUrlFactory();
 
   @Test
-  public void createUrlTest() throws Exception {
+  public void urlIsCreated__WhenStringRepresentationIsValid__Test() throws Exception {
     // Create URL
     URL url = urlFactory.create(URL_VALID);
 
@@ -37,11 +37,11 @@ public class DefaultUrlFactoryTest {
   }
 
   @Test
-  public void malformedUrlCausesExceptionTest() throws Exception {
+  public void exceptionIsThrown__WhenStringRepresentationIsMalformed__Test() throws Exception {
     // Describe the exception to expect
     thrown.expect(MalformedURLException.class);
 
     // Attempt to create an invalid URL
-    urlFactory.create(URL_INVALID);
+    urlFactory.create(URL_MALFORMED);
   }
 }
