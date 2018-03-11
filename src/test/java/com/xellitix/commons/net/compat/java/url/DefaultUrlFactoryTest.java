@@ -1,4 +1,4 @@
-package com.xellitix.commons.net.compat.url;
+package com.xellitix.commons.net.compat.java.url;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -41,7 +41,7 @@ public class DefaultUrlFactoryTest {
     // Describe the exception to expect
     thrown.expect(MalformedURLException.class);
 
-    // Attempt to create an invalid URL
+    // Attempt to create a malformed URL
     urlFactory.create(URL_MALFORMED);
   }
 }
