@@ -7,21 +7,14 @@
     <parent>
         <groupId>com.xellitix.commons</groupId>
         <artifactId>parent-pom</artifactId>
-        <version>0.1.0</version>
+        <version>0.2.0</version>
     </parent>
 
     <artifactId>net</artifactId>
-    <version>0.2.0</version>
+    <version>0.3.0</version>
     <packaging>jar</packaging>
     <name>Xellitix Commons - Networking</name>
     <description>Networking library</description>
-
-    <licenses>
-        <license>
-            <name>The Apache License, Version 2.0</name>
-            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
-        </license>
-    </licenses>
 
     <scm>
         <connection>scm:git:git://github.com/Xellitix/commons-net.git</connection>

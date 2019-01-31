@@ -2,10 +2,6 @@
 
 Java networking library.
 
-## Status
-
-__Pre-Alpha__
-
 ## Style
 
 This project aims to adhere to the [Google Java Style Guide](https://google.github.io/styleguide/javaguide.html).
