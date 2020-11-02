@@ -1,15 +1,49 @@
 # Xellitix Commons - Networking
 
-Java networking library.
+Kotlin library providing factories + Guice modules for creating java.net objects.
 
-## Style
+## Usage
 
-This project aims to adhere to the [Google Java Style Guide](https://google.github.io/styleguide/javaguide.html).
+### URL
+
+``` kotlin
+object Driver {
+
+    @JvmStatic
+    fun main(args: Array<String>) {
+        val urlFactory = Guice
+            .createInjector(UrlFactoryModule())
+            .getInstance<UrlFactory>()
+
+        val url = try {
+            urlFactory.create("https://localhost:8080/coolResource")
+        } catch (ex: MalformedUrlException) {
+            // Do something with exception
+        }
+    }
+}
+```
+
+### URI 
+
+``` kotlin
+object Driver {
+
+    @JvmStatic
+    fun main(args: Array<String>) {
+        val uriFactory = Guice
+            .createInjector(UriFactoryModule())
+            .getInstance<UriFactory>()
+
+        val uri = try {
+            uriFactory.create("data:,Hello%20World")
+        } catch (ex: UriSyntaxException) {
+            // Do something with exception
+        }
+    }
+}
+```
 
 ## Versioning
 
-This project aims to adhere to [Semantic Versioning 2.0.0](http://semver.org/).
-
-## Authors
-
-- [Grayson Kuhns](https://www.linkedin.com/in/graysonkuhns/) ([Send email](mailto:grayson.kuhns@xellitix.com))
+This project adheres to [Semantic Versioning 2.0.0](http://semver.org/).
